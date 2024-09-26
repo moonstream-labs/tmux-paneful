@@ -6,14 +6,6 @@ default_pane_resize="5"
 
 source "$CURRENT_DIR/scripts/helpers.sh"
 
-pane_navigation_bindings() {
-    # We'll keep these unbound as they might conflict with other uses
-    tmux unbind-key M-h
-    tmux unbind-key M-j
-    tmux unbind-key M-k
-    tmux unbind-key M-l
-}
-
 window_move_bindings() {
     tmux bind-key -r M-, swap-window -d -t -1
     tmux bind-key -r M-. swap-window -d -t +1
