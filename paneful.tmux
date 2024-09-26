@@ -34,10 +34,10 @@ pane_split_bindings() {
 }
 
 pane_swap_bindings() {
-    tmux bind-key -r C-M-Left swap-pane -L
-    tmux bind-key -r C-M-Down swap-pane -D
-    tmux bind-key -r C-M-Up swap-pane -U
-    tmux bind-key -r C-M-Right swap-pane -R
+    tmux bind-key -r S-Left swap-pane -L # Move pane to the left side
+    tmux bind-key -r S-Down swap-pane -D # Swap panes clockwise
+    tmux bind-key -r S-Up swap-pane -U # Swap panes counter-clockwise
+    tmux bind-key -r S-Right swap-pane -R # Move pane to the right side
 }
 
 main() {
