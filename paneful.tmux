@@ -1,17 +1,10 @@
 #!/usr/bin/env bash
 
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 default_pane_resize="5"
 
-get_tmux_option() {
-    local option=$1
-    local default_value=$2
-    local option_value=$(tmux show-option -gqv "$option")
-    if [ -z "$option_value" ]; then
-        echo "$default_value"
-    else
-        echo "$option_value"
-    fi
-}
+source "$CURRENT_DIR/scripts/helpers.sh"
 
 pane_navigation_bindings() {
     # Remove default navigation bindings
